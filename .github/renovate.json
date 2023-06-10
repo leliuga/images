@@ -1,0 +1,43 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    ":dependencyDashboard",
+    ":gitSignOff",
+    ":semanticCommits",
+    ":semanticCommitScope(deps)",
+    "schedule:earlyMondays"
+  ],
+  "enabledManagers": [
+    "regex",
+    "dockerfile"
+  ],
+  "dependencyDashboardTitle": "Dependencies Dashboard",
+  "dependencyDashboardHeader": "This issue lists chores and detected dependencies :wave:",
+  "dependencyDashboardLabels": [
+    "bot",
+    "dependencies"
+  ],
+  "branchPrefix": "deps/",
+  "prHeader": "Chore Dependencies Request",
+  "labels": [
+    "bot",
+    "dependencies",
+    "status/0-triage",
+    "area/image",
+    "priority/p2"
+  ],
+  "semanticCommitType": "chore",
+  "commitMessageAction": "",
+  "regexManagers": [
+    {
+      "fileMatch": [
+        "Makefile"
+      ],
+      "matchStrings": [
+        "(?<depName>ghcr.io\\/leliuga\\/images):(?<currentValue>.*)"
+      ],
+      "datasourceTemplate": "docker",
+      "versioningTemplate": "semver"
+    }
+  ]
+}
