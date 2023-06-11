@@ -1,0 +1,11 @@
+#!/bin/bash
+
+TITLE="Go (Golang)"
+BASE_REPO=golang
+VARIANTS=(browser node node-browser)
+IMAGE_CUSTOMIZATIONS='
+RUN curl https://raw.githubusercontent.com/golang/dep/master/install.sh | INSTALL_DIRECTORY=/usr/local/bin sh
+RUN curl -sSL https://github.com/gotestyourself/gotestsum/releases/download/v0.4.2/gotestsum_0.4.2_linux_amd64.tar.gz | tar -xz -C /usr/local/bin gotestsum
+'
+
+source ../shared/images/generate.sh

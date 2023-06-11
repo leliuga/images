@@ -1,0 +1,12 @@
+#!/bin/bash
+
+TITLE="Python"
+BASE_REPO=python
+VARIANTS=(browser node node-browser)
+IMAGE_CUSTOMIZATIONS='
+# Install pipenv and poetry
+RUN apk add libffi-dev
+RUN pip install --no-cache pipenv poetry
+'
+
+source ../shared/images/generate.sh

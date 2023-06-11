@@ -2,11 +2,13 @@
 
 ## License
 
-This project is licensed under the Mozilla Public License Version 2.0 License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the Mozilla Public License Version 2.0 License - see the [LICENSE](LICENSE) file for
+details.
 
 ## Thank you
 
-This project could not have been built without the following libraries or projects. They are either directly used in Leliuga or provided a lot of inspiration for the shape of the project:
+This project could not have been built without the following libraries or projects. They are either directly used in
+Leliuga or provided a lot of inspiration for the shape of the project:
 
 - [Git](https://git-scm.com/)
 - [Golang](https://go.dev/)

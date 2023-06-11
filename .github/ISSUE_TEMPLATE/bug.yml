@@ -24,8 +24,7 @@ body:
       required: true
   - type: input
     attributes:
-      label: Package version
-      description: Output of `k8s version`
+      label: Image version
     validations:
       required: true
   - type: input
