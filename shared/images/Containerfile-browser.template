@@ -1,0 +1,10 @@
+FROM {{BASE_IMAGE}}
+
+LABEL org.opencontainers.image.title="{{TITLE}}"
+LABEL org.opencontainers.image.description="{{TITLE}} image browser variant based on {{BASE_IMAGE}}"
+LABEL org.opencontainers.image.licenses="MPL-2.0"
+LABEL org.opencontainers.image.authors="Leliuga Authors"
+LABEL org.opencontainers.image.documentation="https://github.com/leliuga/images/blob/main/README.md"
+LABEL org.opencontainers.image.source="https://github.com/leliuga/images"
+
+RUN apk --update --no-cache add chromium
