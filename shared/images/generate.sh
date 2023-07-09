@@ -13,11 +13,11 @@ TEMPLATE=${TEMPLATE:-base}
 VARIANTS=${VARIANTS:-none}
 TAG_FILTER="${TAG_FILTER:-cat}"
 TAG_INCLUDE_FILTER="${TAG_INCLUDE_FILTER:-cat}"
-ORGANIZATION=${ORGANIZATION:-ghcr.io/leliuga}
-ORGANIZATION_REPO=${ORGANIZATION_REPO:-"$ORGANIZATION/$BASE_REPO"}
+VENDOR=${VENDOR:-ghcr.io/leliuga}
+REPO=${REPO:-"${BASE_REPO}"}
 
 find_tags_and_aliases() {
-    curl --silent --location --fail --retry 3 "$MANIFEST_SOURCE" |
+    curl --silent --location --fail --retry 3 "${MANIFEST_SOURCE}" |
         grep Tags |
         sed 's/^.*Tags: //g' |
         ${TAG_FILTER} |
@@ -43,50 +43,51 @@ find_template() {
 
     exit 1
 }
-function render_containerfile_template() {
+
+render_containerfile_template() {
     TEMP=$(mktemp)
     TEMPLATE_PATH=$(find_template Containerfile "$1")
 
-    printf "%s\n" "${IMAGE_CUSTOMIZATIONS}" >"$TEMP"
-    echo "$GENERATED_HEADER"
+    printf "%s\n" "${IMAGE_CUSTOMIZATIONS}" > "${TEMP}"
+    echo "${GENERATED_HEADER}"
 
-    cat "$TEMPLATE_PATH" |
-        sed "s|{{BASE_IMAGE}}|$BASE_IMAGE|g" |
-        sed "/# BEGIN IMAGE CUSTOMIZATIONS/ r $TEMP" |
-        sed "s|{{TITLE}}|$TITLE|g"
+    cat "${TEMPLATE_PATH}" |
+        sed "s|{{BASE_IMAGE}}|${BASE_IMAGE}|g" |
+        sed "/# BEGIN IMAGE CUSTOMIZATIONS/ r ${TEMP}" |
+        sed "s|{{TITLE}}|${TITLE}|g"
 
-    rm "$TEMP"
+    rm "${TEMP}"
 }
 
 for tag_aliases in $(find_tags_and_aliases); do
-    tag=$(echo "$tag_aliases" | cut -d: -f1)
+    tag=$(echo "${tag_aliases}" | cut -d: -f1)
     aliases=""
 
-    if $(echo "$tag_aliases" | grep -q :); then
-        aliases=$(echo "$tag_aliases" | cut -d: -f2)
+    if $(echo "${tag_aliases}" | grep -q :); then
+        aliases=$(echo "${tag_aliases}" | cut -d: -f2)
     fi
 
-    echo Generating "$(basename "$(pwd)")" "$tag" Containerfile
-    mkdir -p "images/$tag"
+    echo Generating "$(basename "$(pwd)")" "${tag}" Containerfile
+    mkdir -p "images/${tag}"
 
     BASE_IMAGE=${BASE_REPO}:${tag}
-    render_containerfile_template "$TEMPLATE" >"images/$tag/Containerfile"
-    echo "${tag}" >"images/$tag/TAG"
-    echo "${aliases}" >"images/$tag/ALIASES"
+    render_containerfile_template "${TEMPLATE}" >"images/${tag}/Containerfile"
+    echo "${tag}" >"images/${tag}/TAG"
+    echo "${aliases}" >"images/${tag}/ALIASES"
 
     # variants based on the base image
     if [ "$VARIANTS" != "none" ]; then
         for variant in ${VARIANTS[@]}; do
-            echo " + including $variant variant"
-            mkdir -p "images/$tag/$variant"
+            echo " + including ${variant} variant"
+            mkdir -p "images/${tag}/${variant}"
 
-            BASE_IMAGE="$ORGANIZATION_REPO:$tag"
-            render_containerfile_template "$variant" > "images/$tag/$variant/Containerfile"
-            echo "$tag-$variant" > "images/$tag/$variant/TAG"
+            BASE_IMAGE="${VENDOR}/${REPO}:${tag}"
+            render_containerfile_template "${variant}" > "images/${tag}/${variant}/Containerfile"
+            echo "${tag}-${variant}" > "images/${tag}/${variant}/TAG"
             if [[ "${aliases}" ]]; then
-                echo "$aliases-$variant" | sed "s|,|-$variant,|g" > "images/$tag/$variant/ALIASES"
+                echo "$aliases-${variant}" | sed "s|,|-${variant},|g" > "images/${tag}/${variant}/ALIASES"
             else
-                echo '' > "images/$tag/$variant/ALIASES"
+                echo '' > "images/${tag}/${variant}/ALIASES"
             fi
         done
     fi
