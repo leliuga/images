@@ -4,6 +4,7 @@ TITLE="Node.js"
 BASE_REPO=node
 VARIANTS=(browser)
 IMAGE_CUSTOMIZATIONS=''
-TAG_FILTER="grep -v -e chakracore-8.11.1"
+TAG_FILTER="grep alpine"
+TAG_INCLUDE_FILTER="grep -v -e chakracore-8.11.1"
 
 source ../shared/images/generate.sh

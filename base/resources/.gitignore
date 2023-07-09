@@ -1,0 +1,4 @@
+*
+!installed-pkgs
+!.gitignore
+!Containerfile-base.template

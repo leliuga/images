@@ -8,5 +8,6 @@ IMAGE_CUSTOMIZATIONS='
 RUN apk add libffi-dev
 RUN pip install --no-cache pipenv poetry
 '
+TAG_FILTER="grep alpine"
 
 source ../shared/images/generate.sh
