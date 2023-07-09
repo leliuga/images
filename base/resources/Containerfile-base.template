@@ -1,0 +1,34 @@
+FROM {{BASE_IMAGE}} AS base
+
+ARG USER=leliuga
+ARG GROUP=leliuga
+ARG USER_ID=1001
+ARG GROUP_ID=1001
+ARG WORKDIR=/app
+
+RUN apk --update --no-cache add curl git tar nano; \
+    rm -rf /var/cache/apk/*; \
+    addgroup -g $GROUP_ID -S $GROUP; \
+    adduser --disabled-password -g $GROUP_ID -D -S -s "/bin/sh" -h "/home/$USER" -u $USER_ID -G $GROUP $USER
+
+FROM scratch AS finalize
+
+LABEL org.opencontainers.image.title="{{TITLE}}"
+LABEL org.opencontainers.image.description="{{TITLE}} image based on {{BASE_IMAGE}}"
+LABEL org.opencontainers.image.licenses="MPL-2.0"
+LABEL org.opencontainers.image.authors="Leliuga Authors"
+LABEL org.opencontainers.image.documentation="https://github.com/leliuga/images/blob/main/README.md"
+LABEL org.opencontainers.image.source="https://github.com/leliuga/images"
+
+ARG USER=leliuga
+ARG WORKDIR=/app
+
+ENV PS1='[`date "+%F %T"`] \u@\h:\w $ '
+ENV EDITOR="nano"
+
+COPY --from=base / /
+
+WORKDIR $WORKDIR
+USER $USER
+
+CMD ["/bin/sh"]
