@@ -1,7 +1,7 @@
 fetch https://dl-cdn.alpinelinux.org/alpine/v3.16/main/x86_64/APKINDEX.tar.gz
 fetch https://dl-cdn.alpinelinux.org/alpine/v3.16/community/x86_64/APKINDEX.tar.gz
-v3.16.7-139-g1ad42f58eb3 [https://dl-cdn.alpinelinux.org/alpine/v3.16/main]
-v3.16.7-139-g1ad42f58eb3 [https://dl-cdn.alpinelinux.org/alpine/v3.16/community]
+v3.16.7-162-g21d5538eafc [https://dl-cdn.alpinelinux.org/alpine/v3.16/main]
+v3.16.7-160-g0317b1dcbce [https://dl-cdn.alpinelinux.org/alpine/v3.16/community]
 OK: 17040 distinct packages available
 alpine-baselayout-3.2.0-r23 x86_64 {alpine-baselayout} (GPL-2.0-only)
 alpine-baselayout-data-3.2.0-r23 x86_64 {alpine-baselayout} (GPL-2.0-only)
@@ -24,7 +24,7 @@ musl-utils-1.2.3-r3 x86_64 {musl} (MIT BSD GPL2+)
 nano-6.3-r0 x86_64 {nano} (GPL-3.0-or-later)
 ncurses-libs-6.3_p20220521-r1 x86_64 {ncurses} (MIT)
 ncurses-terminfo-base-6.3_p20220521-r1 x86_64 {ncurses} (MIT)
-nghttp2-libs-1.47.0-r1 x86_64 {nghttp2} (MIT)
+nghttp2-libs-1.47.0-r2 x86_64 {nghttp2} (MIT)
 pcre2-10.42-r0 x86_64 {pcre2} (BSD-3-Clause)
 scanelf-1.3.4-r0 x86_64 {pax-utils} (GPL-2.0-only)
 ssl_client-1.35.0-r17 x86_64 {busybox} (GPL-2.0-only)
