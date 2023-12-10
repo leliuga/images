@@ -1,0 +1,32 @@
+fetch https://dl-cdn.alpinelinux.org/alpine/v3.16/main/x86_64/APKINDEX.tar.gz
+fetch https://dl-cdn.alpinelinux.org/alpine/v3.16/community/x86_64/APKINDEX.tar.gz
+v3.16.8-11-gbde6c9b0015 [https://dl-cdn.alpinelinux.org/alpine/v3.16/main]
+v3.16.8-11-gbde6c9b0015 [https://dl-cdn.alpinelinux.org/alpine/v3.16/community]
+OK: 17038 distinct packages available
+alpine-baselayout-3.2.0-r23 x86_64 {alpine-baselayout} (GPL-2.0-only)
+alpine-baselayout-data-3.2.0-r23 x86_64 {alpine-baselayout} (GPL-2.0-only)
+alpine-keys-2.4-r1 x86_64 {alpine-keys} (MIT)
+apk-tools-2.12.9-r3 x86_64 {apk-tools} (GPL-2.0-only)
+brotli-libs-1.0.9-r6 x86_64 {brotli} (MIT)
+busybox-1.35.0-r17 x86_64 {busybox} (GPL-2.0-only)
+ca-certificates-20230506-r0 x86_64 {ca-certificates} (MPL-2.0 AND MIT)
+ca-certificates-bundle-20230506-r0 x86_64 {ca-certificates} (MPL-2.0 AND MIT)
+curl-8.5.0-r0 x86_64 {curl} (curl)
+expat-2.5.0-r0 x86_64 {expat} (MIT)
+git-2.36.6-r0 x86_64 {git} (GPL-2.0-or-later)
+libacl-2.3.1-r0 x86_64 {acl} (LGPL-2.1-or-later AND GPL-2.0-or-later)
+libc-utils-0.7.2-r3 x86_64 {libc-dev} (BSD-2-Clause AND BSD-3-Clause)
+libcrypto1.1-1.1.1w-r1 x86_64 {openssl} (OpenSSL)
+libcurl-8.5.0-r0 x86_64 {curl} (curl)
+libssl1.1-1.1.1w-r1 x86_64 {openssl} (OpenSSL)
+musl-1.2.3-r3 x86_64 {musl} (MIT)
+musl-utils-1.2.3-r3 x86_64 {musl} (MIT BSD GPL2+)
+nano-6.3-r0 x86_64 {nano} (GPL-3.0-or-later)
+ncurses-libs-6.3_p20220521-r1 x86_64 {ncurses} (MIT)
+ncurses-terminfo-base-6.3_p20220521-r1 x86_64 {ncurses} (MIT)
+nghttp2-libs-1.47.0-r2 x86_64 {nghttp2} (MIT)
+pcre2-10.42-r0 x86_64 {pcre2} (BSD-3-Clause)
+scanelf-1.3.4-r0 x86_64 {pax-utils} (GPL-2.0-only)
+ssl_client-1.35.0-r17 x86_64 {busybox} (GPL-2.0-only)
+tar-1.34-r1 x86_64 {tar} (GPL-3.0-or-later)
+zlib-1.2.12-r3 x86_64 {zlib} (Zlib)
