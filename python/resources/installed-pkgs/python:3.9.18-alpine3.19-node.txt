@@ -1,8 +1,8 @@
 fetch https://dl-cdn.alpinelinux.org/alpine/v3.19/main/x86_64/APKINDEX.tar.gz
 fetch https://dl-cdn.alpinelinux.org/alpine/v3.19/community/x86_64/APKINDEX.tar.gz
-v3.19.0-19-ga0ddaee500e [https://dl-cdn.alpinelinux.org/alpine/v3.19/main]
-v3.19.0-21-g50a95c55db3 [https://dl-cdn.alpinelinux.org/alpine/v3.19/community]
-OK: 22984 distinct packages available
+v3.19.0-263-ga22ffd47298 [https://dl-cdn.alpinelinux.org/alpine/v3.19/main]
+v3.19.0-265-g179e4782bd2 [https://dl-cdn.alpinelinux.org/alpine/v3.19/community]
+OK: 22985 distinct packages available
 .python-rundeps-20231209.013953 noarch {.python-rundeps} ()
 ada-libs-2.7.4-r0 x86_64 {ada} (( Apache-2.0 OR MIT ) AND MPL-2.0)
 alpine-baselayout-3.4.3-r2 x86_64 {alpine-baselayout} (GPL-2.0-only)
@@ -14,7 +14,7 @@ brotli-libs-1.1.0-r1 x86_64 {brotli} (MIT)
 build-base-0.5-r3 x86_64 {build-base} (MIT)
 busybox-1.36.1-r15 x86_64 {busybox} (GPL-2.0-only)
 busybox-binsh-1.36.1-r15 x86_64 {busybox} (GPL-2.0-only)
-c-ares-1.22.1-r0 x86_64 {c-ares} (MIT)
+c-ares-1.24.0-r0 x86_64 {c-ares} (MIT)
 ca-certificates-20230506-r0 x86_64 {ca-certificates} (MPL-2.0 AND MIT)
 ca-certificates-bundle-20230506-r0 x86_64 {ca-certificates} (MPL-2.0 AND MIT)
 curl-8.5.0-r0 x86_64 {curl} (curl)
@@ -68,7 +68,7 @@ musl-dev-1.2.4_git20230717-r4 x86_64 {musl} (MIT)
 musl-utils-1.2.4_git20230717-r4 x86_64 {musl} (MIT AND BSD-2-Clause AND GPL-2.0-or-later)
 ncurses-terminfo-base-6.4_p20231125-r0 x86_64 {ncurses} (X11)
 nghttp2-libs-1.58.0-r0 x86_64 {nghttp2} (MIT)
-nodejs-20.10.0-r1 x86_64 {nodejs} (MIT)
+nodejs-20.11.0-r0 x86_64 {nodejs} (MIT)
 npm-10.2.5-r0 x86_64 {npm} (Artistic-2.0)
 patch-2.7.6-r10 x86_64 {patch} (GPL-3.0-or-later)
 pkgconf-2.1.0-r0 x86_64 {pkgconf} (ISC)

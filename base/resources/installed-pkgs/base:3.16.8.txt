@@ -1,7 +1,7 @@
 fetch https://dl-cdn.alpinelinux.org/alpine/v3.16/main/x86_64/APKINDEX.tar.gz
 fetch https://dl-cdn.alpinelinux.org/alpine/v3.16/community/x86_64/APKINDEX.tar.gz
-v3.16.8-11-gbde6c9b0015 [https://dl-cdn.alpinelinux.org/alpine/v3.16/main]
-v3.16.8-11-gbde6c9b0015 [https://dl-cdn.alpinelinux.org/alpine/v3.16/community]
+v3.16.8-61-g36c7c081f05 [https://dl-cdn.alpinelinux.org/alpine/v3.16/main]
+v3.16.8-61-g36c7c081f05 [https://dl-cdn.alpinelinux.org/alpine/v3.16/community]
 OK: 17038 distinct packages available
 alpine-baselayout-3.2.0-r23 x86_64 {alpine-baselayout} (GPL-2.0-only)
 alpine-baselayout-data-3.2.0-r23 x86_64 {alpine-baselayout} (GPL-2.0-only)

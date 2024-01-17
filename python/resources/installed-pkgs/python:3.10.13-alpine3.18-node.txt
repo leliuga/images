@@ -1,8 +1,8 @@
 fetch https://dl-cdn.alpinelinux.org/alpine/v3.18/main/x86_64/APKINDEX.tar.gz
 fetch https://dl-cdn.alpinelinux.org/alpine/v3.18/community/x86_64/APKINDEX.tar.gz
-v3.18.5-35-g39a8be1d680 [https://dl-cdn.alpinelinux.org/alpine/v3.18/main]
-v3.18.5-36-ga3e305d65f1 [https://dl-cdn.alpinelinux.org/alpine/v3.18/community]
-OK: 20070 distinct packages available
+v3.18.5-123-gc116d405916 [https://dl-cdn.alpinelinux.org/alpine/v3.18/main]
+v3.18.5-122-g2ad39d5dc3f [https://dl-cdn.alpinelinux.org/alpine/v3.18/community]
+OK: 20072 distinct packages available
 .python-rundeps-20231201.022151 noarch {.python-rundeps} ()
 alpine-baselayout-3.4.3-r1 x86_64 {alpine-baselayout} (GPL-2.0-only)
 alpine-baselayout-data-3.4.3-r1 x86_64 {alpine-baselayout} (GPL-2.0-only)
