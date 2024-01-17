@@ -1,8 +1,8 @@
 fetch https://dl-cdn.alpinelinux.org/alpine/v3.17/main/x86_64/APKINDEX.tar.gz
 fetch https://dl-cdn.alpinelinux.org/alpine/v3.17/community/x86_64/APKINDEX.tar.gz
-v3.17.6-9-ged38b88234d [https://dl-cdn.alpinelinux.org/alpine/v3.17/main]
-v3.17.6-9-ged38b88234d [https://dl-cdn.alpinelinux.org/alpine/v3.17/community]
-OK: 17819 distinct packages available
+v3.17.6-65-g983eb57337a [https://dl-cdn.alpinelinux.org/alpine/v3.17/main]
+v3.17.6-65-g983eb57337a [https://dl-cdn.alpinelinux.org/alpine/v3.17/community]
+OK: 17821 distinct packages available
 alpine-baselayout-3.4.0-r0 x86_64 {alpine-baselayout} (GPL-2.0-only)
 alpine-baselayout-data-3.4.0-r0 x86_64 {alpine-baselayout} (GPL-2.0-only)
 alpine-keys-2.4-r1 x86_64 {alpine-keys} (MIT)
