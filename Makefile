@@ -1,5 +1,5 @@
 ECOSYSTEM = \
-  base golang node python
+  base golang julia node python
 
 images: $(foreach b, $(ECOSYSTEM), $(b)/generate_images)
 publish: $(foreach b, $(ECOSYSTEM), $(b)/publish_images)

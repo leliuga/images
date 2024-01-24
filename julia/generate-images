@@ -1,0 +1,9 @@
+#!/bin/bash
+
+TITLE="Julia"
+BASE_REPO=julia
+VARIANTS=(browser node node-browser)
+IMAGE_CUSTOMIZATIONS=''
+TAG_FILTER="grep alpine"
+
+source ../shared/images/generate.sh
