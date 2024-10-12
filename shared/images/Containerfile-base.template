@@ -13,7 +13,7 @@ ARG USER_ID=1001
 ARG GROUP_ID=1001
 ARG WORKDIR=/app
 
-ENV PS1='[`date "+%F %T"`] \u@\h:\w $ '
+ENV PS1='I`date "+%m%d %T"` \u@\h:\w -> '
 
 RUN apk --update --no-cache add build-base tar curl; \
     rm -rf /var/cache/apk/*; \

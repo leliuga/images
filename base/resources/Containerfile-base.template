@@ -6,7 +6,7 @@ ARG USER_ID=1001
 ARG GROUP_ID=1001
 ARG WORKDIR=/app
 
-RUN apk --update --no-cache add curl git tar nano; \
+RUN apk --update --no-cache add git tar nano brotli; \
     rm -rf /var/cache/apk/*; \
     addgroup -g $GROUP_ID -S $GROUP; \
     adduser --disabled-password -g $GROUP_ID -D -S -s "/bin/sh" -h "/home/$USER" -u $USER_ID -G $GROUP $USER
@@ -23,7 +23,7 @@ LABEL org.opencontainers.image.source="https://github.com/leliuga/images"
 ARG USER=leliuga
 ARG WORKDIR=/app
 
-ENV PS1='[`date "+%F %T"`] \u@\h:\w $ '
+ENV PS1='I`date "+%m%d %T"` \u@\h:\w -> '
 ENV EDITOR="nano"
 
 COPY --from=base / /
