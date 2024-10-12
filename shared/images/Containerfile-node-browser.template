@@ -7,4 +7,4 @@ LABEL org.opencontainers.image.authors="Leliuga Authors"
 LABEL org.opencontainers.image.documentation="https://github.com/leliuga/images/blob/main/README.md"
 LABEL org.opencontainers.image.source="https://github.com/leliuga/images"
 
-RUN apk --update --no-cache add curl chromium nodejs yarn npm
+RUN apk --update --no-cache add chromium nodejs yarn npm
